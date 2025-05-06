@@ -34,7 +34,7 @@ const MoviesPage = () => {
   return (
     <div className={clsx("container", s.container)}>
       <SearchBar onSubmit={handleSubmit} />
-      {filteredMovies.length > 0 ? <MovieList movies={filteredMovies} /> : <p>Nothing found for your query</p>}
+      {filteredMovies.length > 0 ? (<MovieList movies={filteredMovies} />) : query ? (<p>Nothing found for your query</p>) : null}
     </div>
   );
 }
