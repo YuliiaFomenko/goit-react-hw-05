@@ -1,4 +1,5 @@
 import React from 'react'
+import s from './SearchBar.module.css'
 
 const SearchBar = ({ onSubmit }) => {
 
@@ -16,7 +17,7 @@ const SearchBar = ({ onSubmit }) => {
   }
   return (
     <div>
-      <form onSubmit={handleSubmit}>
+      <form className={s.form} onSubmit={handleSubmit}>
         <input type="text" name="query" autoComplete="off" autoFocus placeholder="Search movies..." />
         <button type="submit">Search</button>
       </form>

@@ -3,6 +3,8 @@ import { useSearchParams } from 'react-router-dom'
 import { fetchMoviesByQuery } from '../../services/API';
 import MovieList from '../../components/MovieList/MovieList';
 import SearchBar from '../../components/SearchBar/SearchBar';
+import clsx from 'clsx';
+import s from './MoviePage.module.css'
 
 const MoviesPage = () => {
   const [movies, setMovies] = useState([])
@@ -30,11 +32,11 @@ const MoviesPage = () => {
   const filteredMovies = movies.filter((movie) => movie.title.toLowerCase().includes(query.toLowerCase()));
 
   return (
-    <div>
+    <div className={clsx("container", s.container)}>
       <SearchBar onSubmit={handleSubmit} />
-      <MovieList movies={filteredMovies} />
+      {filteredMovies.length > 0 ? <MovieList movies={filteredMovies} /> : <p>Nothing found for your query</p>}
     </div>
-  )
+  );
 }
 
 export default MoviesPage

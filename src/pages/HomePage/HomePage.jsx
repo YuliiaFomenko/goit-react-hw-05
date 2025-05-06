@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import MovieList from '../../components/MovieList/MovieList'
 import { fetchMovies } from '../../services/API'
+import s from './HomePage.module.css'
 
 const HomePage = () => {
 
@@ -20,8 +21,8 @@ useEffect(() => {
 }, [])
 
   return (
-    <div>
-      <h1>Trending today</h1>
+    <div className='container'>
+      <h1 className={s.title}>Trending today</h1>
       <MovieList movies={movies} />
     </div>
   )

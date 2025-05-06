@@ -1,0 +1,40 @@
+.goBackLink {
+  display: inline-block;
+  text-decoration: none;
+  color: #000;
+  font-size: 16px;
+}
+.goBackLink:hover {
+  text-decoration: underline;
+}
+
+.movieDetails {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.movieInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-self: baseline;
+ 
+}
+
+.additionalInfo{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.additionalInfoList {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.outLet {
+  padding-top: 20px;
+}
